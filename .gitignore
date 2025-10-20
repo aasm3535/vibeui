@@ -1,1 +1,160 @@
-/target
+# Rust artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Log files
+*.log
+
+# Debug files
+debug/
+target/
+
+# Documentation build
+docs/build/
+book/
+
+# Test artifacts
+/tests/target/
+/examples/target/
+
+# Coverage reports
+tarpaulin-report.html
+cobertura.xml
+
+# Local configuration
+.env
+config.local.toml
+
+# Temporary files
+*.tmp
+*.temp
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rust specific
+**/*.rs.bk
+Cargo.lock
+
+# Backup and temporary files
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Local configuration
+.env
+config.local.toml
+settings.local.toml
+
+# Documentation build
+docs/build/
+book/
+
+# Test artifacts
+/tests/target/
+/examples/target/
+
+# Coverage reports
+tarpaulin-report.html
+cobertura.xml
+lcov.info
+
+# Profiling data
+perf.data*
+flamegraph.svg
+callgrind.out.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+cache/
+
+# Node.js (if using for documentation tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using for scripts or tools)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk

@@ -1,6 +1,61 @@
 [package]
 name = "vibeui"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+authors = ["VibeUI Contributors"]
+description = "A cross-platform terminal UI library for Rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/vibeui/vibeui"
+homepage = "https://github.com/vibeui/vibeui"
+documentation = "https://docs.rs/vibeui"
+keywords = ["terminal", "tui", "ui", "console", "cross-platform"]
+categories = ["command-line-interface", "command-line-utilities"]
+readme = "README.md"
+
+[lib]
+name = "vibeui"
+path = "src/lib.rs"
 
 [dependencies]
+# Terminal handling
+crossterm = "0.27"
+unicode-width = "0.1"
+
+# Cross-platform support
+libc = "0.2"
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["wincon", "winuser", "consoleapi"] }
+
+# Event handling and serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# Styling and colors
+colored = "2.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Async support (optional)
+tokio = { version = "1.0", features = ["full"], optional = true }
+
+[dev-dependencies]
+# Testing dependencies
+criterion = "0.5"
+proptest = "1.0"
+tempfile = "3.0"
+
+[features]
+default = []
+async = ["tokio"]
+
+# [[bench]]
+# name = "render_benchmark"
+# harness = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
